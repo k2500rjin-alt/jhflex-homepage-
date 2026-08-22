@@ -151,3 +151,4 @@
 
 .dark .mini-label { color: var(--cyan); }
 .dark .form-label { color: var(--cyan); }
+html { scroll-behavior: smooth; }

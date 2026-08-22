@@ -2,6 +2,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, Check, ChevronRight, Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
+import { ContactDialog } from "../components/ContactDialog";
 
 const navItems = [
   ["회사소개", "about"],
@@ -102,7 +103,9 @@ export default function Home() {
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
         )}
-        <a className="header-cta" href="#contact">견적 문의 <ArrowUpRight size={15} /></a>
+        <ContactDialog>
+          <button className="header-cta" style={{ cursor: 'pointer', border: 'none' }}>견적 문의 <ArrowUpRight size={15} /></button>
+        </ContactDialog>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="메뉴 열기" style={{ background: 'transparent', border: 'none', color: 'inherit', cursor: 'pointer' }}>{menuOpen ? <X /> : <Menu />}</button>
       </div>
     </header>
