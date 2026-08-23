@@ -2,7 +2,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { ArrowDownRight, ArrowUpRight, Check, ChevronRight, Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
-import { ContactDialog } from "../components/ContactDialog";
+import { ContactDialog } from "../components/ContactDialog.tsx";
 
 const navItems = [
   ["회사소개", "about"],
